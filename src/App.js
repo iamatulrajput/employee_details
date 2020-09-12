@@ -2,8 +2,7 @@ import React from 'react'
 import {BrowserRouter , Route, Switch} from 'react-router-dom'
 import Home from './Component/Home/Home';
 import Create from './Component/Create/Create';
-import Delete from './Component/Delete/Delete';
-import Update from './Component/Delete/Delete';
+import Update from './Component/Update/Update';
 import Employee from './Component/Employee/Employee';
 export default function App() {
   return (
@@ -12,9 +11,8 @@ export default function App() {
       <Switch>
         <Route path="/" exact component ={Home}></Route>
         <Route path="/create"  component ={Create}></Route>
-        <Route path="/update"  component ={Update}></Route>
-        <Route path ="/delete" component={Delete}></Route>
-        <Route path="/employee" component={Employee}></Route>
+        <Route path="/update/:id"  component ={Update}></Route>
+        <Route path="/employee/:id" component={Employee}></Route>
       
       </Switch>
       </BrowserRouter>

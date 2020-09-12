@@ -15,13 +15,13 @@ export default function Home() {
 
     const loadUsers = async ()=>
     {
-        const res = await axios.get('http://dummy.restapiexample.com/api/v1/employees')
-        setUser(res.data.data);
+        const res = await axios.get('http://localhost:3003/data')
+        setUser(res.data);
     }
 
 
 const deleteUser = async id => {
-    await axios.delete(`http://dummy.restapiexample.com/api/v1/employees/${id}`);
+    await axios.delete(`http://localhost:3003/data/${id}`);
     loadUsers ();
   };
     return (
@@ -69,7 +69,7 @@ const deleteUser = async id => {
                   </Link>
                   <Link
                     class="btn btn-danger"
-                    onClick={() => deleteUser(users.id)}
+                    onClick={() => deleteUser(user.id)}
                   >
                     Delete
                   </Link>
@@ -87,4 +87,4 @@ const deleteUser = async id => {
                </div> 
         </div>
     )
-}
+    }

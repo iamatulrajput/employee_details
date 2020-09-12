@@ -5,21 +5,21 @@ import { useHistory } from "react-router-dom";
  export default  function Create () {
   let history = useHistory();
   const [user, setUser] = useState({
-    name: "atul",
-    age: "25",
-    salary: "50000"
+    name: "",
+    age: "",
+    salary: ""
    
   });
 
   const { name, age, salary } = user;
   const onInputChange = e => {
-    setUser({ ...user, [e.target.name]: e.target.value, });
-    console.log(user)
+    setUser({ ...user,[e.target.name]:e.target.vaule });
+    
   };
 
   const onSubmit = async e => {
     e.preventDefault();
-    await axios.post("http://dummy.restapiexample.com/api/v1/employee/", user);
+    await axios.post("http://localhost:3003/data", );
     history.push("/");
   };
   return (
