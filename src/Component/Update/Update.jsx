@@ -5,9 +5,9 @@ import { useHistory, useParams } from "react-router-dom";
 const Update = () => {
 
   const [user, setUser] = useState({
-    employee_name: "",
-    employee_salary: "",
-    employee_age: "",
+    name: "",
+    age: "",
+    salary: "",
     
   });
   let history = useHistory();
@@ -51,17 +51,17 @@ const Update = () => {
               type="text"
               className="form-control form-control-lg"
               placeholder="Enter Age"
-              name="username"
+              name="age"
               value={age}
               onChange={e => onInputChange(e)}
             />
           </div>
           <div className="form-group">
             <input
-              type="email"
+              type="text"
               className="form-control form-control-lg"
               placeholder="Enter Salary"
-              name="email"
+              name="salary"
               value={salary}
               onChange={e => onInputChange(e)}
             />

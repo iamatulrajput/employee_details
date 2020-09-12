@@ -59,7 +59,7 @@ import { useHistory } from "react-router-dom";
             />
           </div>
        
-          <button className="btn btn-primary btn-block">Add User</button>
+          <button className="btn btn-primary btn-block">Add </button>
         </form>
       </div>
     </div>
